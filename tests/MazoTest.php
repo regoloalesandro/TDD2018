@@ -36,7 +36,7 @@ class MazoTest extends TestCase {
     *Ver si el mazo esta vacio o no
     */
     public function testvacio(){
-    	public $cartas;
+        $cartas = array();
 	$mazo = new Mazo($cartas);
 	$this->assertEquals($mazo->cantidadCartas(),0);
 	$cartas2 = range(1, 50);
