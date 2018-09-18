@@ -38,10 +38,10 @@ class MazoTest extends TestCase {
     public function testvacio(){
     	public $cartas;
 	$mazo = new Mazo($cartas);
-	$this->assertEquals($mazo->esvacio(),0);
+	$this->assertEquals($mazo->cantidadCartas(),0);
 	$cartas2 = range(1, 50);
 	$mazo2 = new Mazo($cartas);
-	$this->assertNotEquals($mazo->esvacio(),0);
+	$this->assertNotEquals($mazo->cantidadCartas(),0);
 	
     }
 
