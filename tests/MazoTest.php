@@ -23,15 +23,26 @@ class MazoTest extends TestCase {
         $this->assertNotEquals($mazo,$mazo2);
     }
      /**
-     * Valida que se pueda agregar una carta al mazo.
-     */
-	
+     * Validar si el mazo tien cartas.
+     */	
     public function testPoseeCartas(){
     	$mazo = new Mazo;
 	$cartas = range(1, 50);
 	$mazo->agregarcarta($cartas);
 	$this->assertTrue(isset($mazo->carta));
     
+    }
+    /** 
+    *Ver si el mazo esta vacio o no
+    */
+    public function testvacio(){
+    	public $cartas;
+	$mazo = new Mazo($cartas);
+	$this->assertEquals($mazo->esvacio(),0);
+	$cartas2 = range(1, 50);
+	$mazo2 = new Mazo($cartas);
+	$this->assertNotEquals($mazo->esvacio(),0);
+	
     }
 
 }
