@@ -17,7 +17,8 @@ class MazoTest extends TestCase {
      * Valida que se pueda mezclar el mazo.
      */
     public function testMezclable() {
-        $mazo = new Mazo;
+            $cartas = 
+	    $mazo = new Mazo;
 	    $mazo2= $mazo;
 	    $mazo->mezclar();
         $this->assertNotEquals($mazo,$mazo2);
