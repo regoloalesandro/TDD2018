@@ -28,8 +28,8 @@ class MazoTest extends TestCase {
 	
     public function testPoseeCartas(){
     	$mazo = new Mazo;
-	$carta = new Carta(420);
-	$mazo->agregarcarta($carta);
+	$cartas = range(1, 50);
+	$mazo->agregarcarta($cartas);
 	$this->assertTrue(isset($mazo->carta));
     
     }
