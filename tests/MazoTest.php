@@ -16,7 +16,9 @@ class MazoTest extends TestCase {
 
     public function testMezclable() {
         $mazo = new Mazo;
-        $this->assertTrue($mazo->mezclar());
+	    $mazo2= $mazo;
+	    $mazo->mezclar();
+        $this->assertNotEquals($mazo,$mazo2);
     }
 
 
