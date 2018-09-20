@@ -56,11 +56,23 @@ class MazoTest extends TestCase {
     }
 
     /**
-     * Valida si se puede pedir una carta 
+     * Valida si se puede pedir una carta y que no se pueda cuando no haya cartas 
      */
     public function testPedirCarta(){
         $carta=range(1,50);
         $mazo= new Mazo($carta);
         $this->assertTrue(null !== $mazo->pedirCarta());
+        $carta2=array();
+        $mazo2= new Mazo($carta2);
+        $this->assertTrue(null == $mazo2->pedirCarta());
+    }
+
+    /**
+     * Valida si se puede cortar el mazo
+     */
+    public function testCorte(){
+        $carta=range(1,50);
+        $mazo=new Mazo($carta);
+
     }
 }
