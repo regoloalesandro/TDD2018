@@ -21,7 +21,7 @@ class MazoTest extends TestCase {
         $cartas = range(1,50);
 	    $mazo = new Mazo($cartas);
 	    $mazo2= $mazo;
-        $this->assertNotEquals($ $mazo->mezclar();,$mazo2);
+        $this->assertNotEquals($ $mazo->mezclar(),$mazo2);
     }
      /**
      * Validar si el mazo tien cartas.
