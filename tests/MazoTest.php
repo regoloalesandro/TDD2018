@@ -55,4 +55,12 @@ class MazoTest extends TestCase {
         $this-> assertNotEquals($mazo,$mazo2);
     }
 
+    /**
+     * Valida si se puede pedir una carta 
+     */
+    public function testPedirCarta(){
+        $carta=range(1,50);
+        $mazo= new Mazo($carta);
+        $this->assertTrue(null !== $mazo->pedirCarta());
+    }
 }
