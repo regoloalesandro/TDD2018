@@ -20,4 +20,8 @@ class Mazo {
     
    array_push($this->cartas,$numero);
   }
+  public function pedirCarta(){
+    $this->mezclar();
+    return array_pop($this->cartas);
+  }
 }
