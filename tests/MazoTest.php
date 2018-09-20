@@ -11,8 +11,8 @@ class MazoTest extends TestCase {
      */
     public function testExiste() {
         $cartas
-        $mazo = new Mazo($cartas);
-        $this->assertTrue(isset($mazo));
+        $deck = new Mazo($cartas);
+        $this->assertTrue(isset($deck));
     }
     /**
      * Valida que se pueda mezclar el mazo.
