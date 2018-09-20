@@ -31,7 +31,7 @@ class MazoTest extends TestCase {
     $cartas = range(1, 50);
     $mazo = new Mazo($cartas);
 	$mazo->agregarcarta($cartas);
-	$this->assertTrue(isset($mazo->cartas()));
+	$this->assertTrue(null !== $mazo->cartas() );
     
     }
     /** 
