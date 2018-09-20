@@ -13,5 +13,8 @@ class Mazo {
   public function mezclar() {
     return TRUE;
   }
+  public function cartas(){
+    return $this->cartas;
+  }
   
 }
