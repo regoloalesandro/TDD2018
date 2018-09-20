@@ -3,9 +3,11 @@
 namespace TDD;
 
 class Carta {
-   $numero;
+   protected $numero;
    public function __construct($numero) {
     $this->numero = $numero;
     }
-  
+  public function numero(){
+      return $this->numero; 
+  }
 }
