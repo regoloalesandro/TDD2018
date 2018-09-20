@@ -16,8 +16,8 @@ class Mazo {
   public function cartas(){
     return $this->cartas;
   }
-  public function agregarCarta(){
+  public function agregarCarta($numero){
     
-    return $this->
+   array_push($this->cartas,$numero);
   }
 }
