@@ -44,5 +44,13 @@ class MazoTest extends TestCase {
 	$this->assertNotEquals($mazo2->contarCartas(),0);
 	
     }
+    /**
+     * Valida si se puede agregar una carta al mazo
+     */
+    public function testAgregarCarta(){
+        $carta=array();
+        $mazo=new Mazo($carta);
+        $this-> assertNotEquals($mazo->agregarCarta(420),$mazo->cartas());
+    }
 
 }
