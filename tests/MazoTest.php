@@ -50,7 +50,7 @@ class MazoTest extends TestCase {
     public function testAgregarCarta(){
         $carta=array();
         $mazo=new Mazo($carta);
-        $mazo2= $mazo;
+        $mazo2 = new Mazo($carta);
         $mazo->agregarCarta(420);
         $this-> assertNotEquals($mazo,$mazo2);
     }
