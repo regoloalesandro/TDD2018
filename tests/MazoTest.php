@@ -19,9 +19,8 @@ class MazoTest extends TestCase {
      */
     public function testMezclable() {
         $cartas = range(1,50);
-	    $mazo = new Mazo($cartas);
-	    $mazo2= $mazo;
-        $this->assertEquals($mazo->mezclar(),$mazo2);
+	    $mazo = new Mazo($cartas);	    
+        $this->assertNotEquals($mazo->mezclar(),$mazo);
     }
      /**
      * Validar si el mazo tien cartas.
