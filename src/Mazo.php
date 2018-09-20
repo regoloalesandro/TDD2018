@@ -8,7 +8,7 @@ class Mazo {
 		$this->cartas = $cartas;
   }
   public function contarCartas(){
-     return array_count_values($this->cartas);
+     return count($this->cartas);
   }
   public function mezclar() {
     return TRUE;
