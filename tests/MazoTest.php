@@ -40,7 +40,7 @@ class MazoTest extends TestCase {
 	$mazo = new Mazo($cartas);
 	$this->assertEquals($mazo->contarCartas(),0);
 	$cartas2 = range(1, 50);
-	$mazo2 = new Mazo($cartas);
+	$mazo2 = new Mazo($cartas2);
 	$this->assertNotEquals($mazo2->contarCartas(),0);
 	
     }
