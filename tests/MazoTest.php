@@ -62,7 +62,7 @@ class MazoTest extends TestCase {
 	$carta5= new Carta(NULL,NULL,NULL);
 	$carta6= new Carta(NULL,NULL,NULL);
 	$carta7= new Carta(NULL,NULL,NULL);
-        $cartas =array($carta1,$carta2,$carta3,$carta4,$carta5,$carta6,$carta7);
+        $cartas2 =array($carta1,$carta2,$carta3,$carta4,$carta5,$carta6,$carta7);
 	$mazo2 = new Mazo($cartas2);
 	$this->assertNotEquals($mazo2->contarCartas(),0);
 	
