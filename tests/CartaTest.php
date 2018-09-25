@@ -28,7 +28,7 @@ class CartaTest extends TestCase {
 /**
 *Valida que se pueda mostrar el palo de la carta  y  su tipo
 */
-     public function testtienenumero(){
+     public function testTienePaloTipo(){
         $numero = 2;	
 	$palo='espada';
 	$tipo='española';
