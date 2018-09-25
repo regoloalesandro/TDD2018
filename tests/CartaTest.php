@@ -16,6 +16,7 @@ class CartaTest extends TestCase {
         $carta = new Carta($numero,$palo,$tipo);
         $this->assertTrue(isset($carta));
 
+
     }
     /**
      * Valida si se gurada bien el numero en la carta
