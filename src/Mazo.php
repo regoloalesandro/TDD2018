@@ -29,7 +29,7 @@ class Mazo {
     }
     return array_pop($this->cartas);
   }
-  public function($numero){
+  public function cortar($numero){
     if($this->cartas == array()){
       return array();
     }
