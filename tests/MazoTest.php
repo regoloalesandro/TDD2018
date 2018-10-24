@@ -117,7 +117,4 @@ class MazoTest extends TestCase {
         $mazo2= new Mazo(array());
         $this->assertEquals($mazo2->cortar($numero),array());
     }
-
-
-    }
 }
