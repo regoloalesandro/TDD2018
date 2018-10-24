@@ -111,7 +111,12 @@ class MazoTest extends TestCase {
 	$carta6= new Carta(NULL,NULL,NULL);
 	$carta7= new Carta(NULL,NULL,NULL);
         $cartas =array($carta1,$carta2,$carta3,$carta4,$carta5,$carta6,$carta7);
-        $mazo=new Mazo($cartas);
+        $mazo = new Mazo($cartas);
+        $numero= rand(0, contarCartas());	    
+        $this->assertNotEquals($mazo->cortar($numero),$mazo);
+        $mazo2= new Mazo(array());
+        $this->assertEquals($mazo2->cortar($numero),array());
+    }
 
 
     }
