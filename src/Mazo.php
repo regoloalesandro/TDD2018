@@ -24,6 +24,9 @@ class Mazo {
    array_push($this->cartas,$numero);
   }
   public function pedirCarta(){
+    if($this->cartas == array()){
+      return array();
+    }
     return array_pop($this->cartas);
   }
 }
