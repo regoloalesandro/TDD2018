@@ -95,9 +95,8 @@ class MazoTest extends TestCase {
         $cartas =array($carta1,$carta2,$carta3,$carta4,$carta5,$carta6,$carta7);
         $mazo= new Mazo($cartas);
         $this->assertTrue(null !== $mazo->pedirCarta());
-        $cartas2=array();
-        $mazo2= new Mazo($carta2);
-        $this->assertEquals($cartas2,$mazo2->pedirCarta());
+        $mazo2= new Mazo(array());
+        $this->assertEquals(array(),$mazo2->pedirCarta());
     }
 
     /**
