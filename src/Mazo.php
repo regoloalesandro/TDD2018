@@ -11,7 +11,7 @@ class Mazo {
      return count($this->cartas);
   }
   public function mezclar() {
-    if ($this->cartas== arrar()){
+    if ($this->cartas== array()){
       return null;
     }
     return shuffle($this->cartas);
