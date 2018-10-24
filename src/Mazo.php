@@ -4,8 +4,8 @@ namespace TDD;
 
 class Mazo {
   protected $cartas; 
-  public function __construct($cartas) {
-		$this->cartas = $cartas;
+  public function __construct($cards) {
+		$this->cartas = $cards;
   }
   public function contarCartas(){
      return count($this->cartas);
