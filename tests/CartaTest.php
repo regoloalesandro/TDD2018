@@ -11,8 +11,8 @@ class CartaTest extends TestCase {
      */
     public function testExiste() {
         $numero= 2;
-	$palo=NULL;
-	$tipo=NULL;
+	    $palo=NULL;
+	    $tipo=NULL;
         $carta = new Carta($numero,$palo,$tipo);
         $this->assertTrue(isset($carta));
 
@@ -31,8 +31,8 @@ class CartaTest extends TestCase {
 */
      public function testTienePaloTipo(){
         $numero = 2;	
-	$palo='espada';
-	$tipo='española';
+	    $palo='espada';
+	    $tipo='española';
         $carta = new Carta($numero,$palo,$tipo);
         $this->assertEquals($carta->palo(),'espada');
 	$this->assertEquals($carta->tipo(),'española');
