@@ -97,7 +97,7 @@ class MazoTest extends TestCase {
         $this->assertTrue(null !== $mazo->pedirCarta());
         $cartas2=array();
         $mazo2= new Mazo($carta2);
-        $this->assertEquals(null,$mazo2->pedirCarta());
+        $this->assertEquals($cartas2,$mazo2->pedirCarta());
     }
 
     /**
@@ -113,6 +113,7 @@ class MazoTest extends TestCase {
 	$carta7= new Carta(NULL,NULL,NULL);
         $cartas =array($carta1,$carta2,$carta3,$carta4,$carta5,$carta6,$carta7);
         $mazo=new Mazo($cartas);
+
 
     }
 }
