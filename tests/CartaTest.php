@@ -11,8 +11,11 @@ class CartaTest extends TestCase {
      */
     public function testExiste() {
         $numero= 2;
-        $carta = new Carta($numero);
+	$palo=NULL;
+	$tipo=NULL;
+        $carta = new Carta($numero,$palo,$tipo);
         $this->assertTrue(isset($carta));
+
 
     }
     /**
@@ -20,7 +23,18 @@ class CartaTest extends TestCase {
      */
     public function testtienenumero(){
         $numero = 2;
-        $carta = new Carta($numero);
+        $carta = new Carta($numero,NULL,NULL);
         $this->assertEquals($carta->numero(),2);
+    }
+/**
+*Valida que se pueda mostrar el palo de la carta  y  su tipo
+*/
+     public function testTienePaloTipo(){
+        $numero = 2;	
+	$palo='espada';
+	$tipo='española';
+        $carta = new Carta($numero,$palo,$tipo);
+        $this->assertEquals($carta->palo(),'espada');
+	$this->assertEquals($carta->tipo(),'española');
     }
 }

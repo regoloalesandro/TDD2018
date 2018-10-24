@@ -10,7 +10,10 @@ class MazoTest extends TestCase {
      * Valida que se puedan crear mazos de cartas.
      */
     public function testExiste() {
-        $cartas =array();
+	$carta1= new Carta(NULL,NULL,NULL);
+        $carta2= new Carta(NULL,NULL,NULL);
+        $carta3= new Carta(NULL,NULL,NULL);
+        $cartas =array($carta1,$carta2,$carta3);
         $deck = new Mazo($cartas);
         $this->assertTrue(isset($deck));
     }
@@ -18,17 +21,30 @@ class MazoTest extends TestCase {
      * Valida que se pueda mezclar el mazo.
      */
     public function testMezclable() {
-        $cartas = range(1,50);
-	    $mazo = new Mazo($cartas);	    
+        $carta1= new Carta(NULL,NULL,NULL);
+        $carta2= new Carta(NULL,NULL,NULL);
+        $carta3= new Carta(NULL,NULL,NULL);
+	$carta4= new Carta(NULL,NULL,NULL);
+	$carta5= new Carta(NULL,NULL,NULL);
+	$carta6= new Carta(NULL,NULL,NULL);
+	$carta7= new Carta(NULL,NULL,NULL);
+        $cartas =array($carta1,$carta2,$carta3,$carta4,$carta5,$carta6,$carta7);
+	$mazo = new Mazo($cartas);	    
         $this->assertNotEquals($mazo->mezclar(),$mazo);
     }
      /**
      * Validar si el mazo tien cartas.
      */	
-    public function testPoseeCartas(){
-    	
-    $cartas = range(1, 50);
-    $mazo = new Mazo($cartas);
+    public function testPoseeCartas(){	
+        $carta1= new Carta(NULL,NULL,NULL);
+        $carta2= new Carta(NULL,NULL,NULL);
+        $carta3= new Carta(NULL,NULL,NULL);
+	$carta4= new Carta(NULL,NULL,NULL);
+	$carta5= new Carta(NULL,NULL,NULL);
+	$carta6= new Carta(NULL,NULL,NULL);
+	$carta7= new Carta(NULL,NULL,NULL);
+        $cartas =array($carta1,$carta2,$carta3,$carta4,$carta5,$carta6,$carta7);
+   	$mazo = new Mazo($cartas);
 	$this->assertTrue(null !== $mazo->cartas() );
     
     }
@@ -39,7 +55,14 @@ class MazoTest extends TestCase {
         $cartas = array();
 	$mazo = new Mazo($cartas);
 	$this->assertEquals($mazo->contarCartas(),0);
-	$cartas2 = range(1, 50);
+	$carta1= new Carta(NULL,NULL,NULL);
+        $carta2= new Carta(NULL,NULL,NULL);
+        $carta3= new Carta(NULL,NULL,NULL);
+	$carta4= new Carta(NULL,NULL,NULL);
+	$carta5= new Carta(NULL,NULL,NULL);
+	$carta6= new Carta(NULL,NULL,NULL);
+	$carta7= new Carta(NULL,NULL,NULL);
+        $cartas2 =array($carta1,$carta2,$carta3,$carta4,$carta5,$carta6,$carta7);
 	$mazo2 = new Mazo($cartas2);
 	$this->assertNotEquals($mazo2->contarCartas(),0);
 	
@@ -48,10 +71,11 @@ class MazoTest extends TestCase {
      * Valida si se puede agregar una carta al mazo
      */
     public function testAgregarCarta(){
-        $carta=array();
-        $mazo=new Mazo($carta);
-        $mazo2 = new Mazo($carta);
-        $mazo->agregarCarta(420);
+        $cartas=array();
+        $mazo=new Mazo($cartas);
+        $mazo2 = new Mazo($cartas);
+	$carta=new Carta(NULL,NULL,NULL);
+        $mazo->agregarCarta($carta);
         $this-> assertNotEquals($mazo,$mazo2);
     }
 
@@ -59,10 +83,17 @@ class MazoTest extends TestCase {
      * Valida si se puede pedir una carta y que no se pueda cuando no haya cartas 
      */
     public function testPedirCarta(){
-        $carta=range(1,50);
-        $mazo= new Mazo($carta);
+         $carta1= new Carta(NULL,NULL,NULL);
+        $carta2= new Carta(NULL,NULL,NULL);
+        $carta3= new Carta(NULL,NULL,NULL);
+	$carta4= new Carta(NULL,NULL,NULL);
+	$carta5= new Carta(NULL,NULL,NULL);
+	$carta6= new Carta(NULL,NULL,NULL);
+	$carta7= new Carta(NULL,NULL,NULL);
+        $cartas =array($carta1,$carta2,$carta3,$carta4,$carta5,$carta6,$carta7);
+        $mazo= new Mazo($cartas);
         $this->assertTrue(null !== $mazo->pedirCarta());
-        $carta2=array();
+        $cartas2=array();
         $mazo2= new Mazo($carta2);
         $this->assertTrue(null == $mazo2->pedirCarta());
     }
@@ -71,8 +102,15 @@ class MazoTest extends TestCase {
      * Valida si se puede cortar el mazo
      */
     public function testCorte(){
-        $carta=range(1,50);
-        $mazo=new Mazo($carta);
+        $carta1= new Carta(NULL,NULL,NULL);
+        $carta2= new Carta(NULL,NULL,NULL);
+        $carta3= new Carta(NULL,NULL,NULL);
+	$carta4= new Carta(NULL,NULL,NULL);
+	$carta5= new Carta(NULL,NULL,NULL);
+	$carta6= new Carta(NULL,NULL,NULL);
+	$carta7= new Carta(NULL,NULL,NULL);
+        $cartas =array($carta1,$carta2,$carta3,$carta4,$carta5,$carta6,$carta7);
+        $mazo=new Mazo($cartas);
 
     }
 }
