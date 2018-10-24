@@ -29,4 +29,10 @@ class Mazo {
     }
     return array_pop($this->cartas);
   }
+  public function($numero){
+    if($this->cartas == array()){
+      return array();
+    }
+    return array_merge(array_slice($this->cartas,0,$numero),array_slice($this->cartas,$numero));
+  }
 }
