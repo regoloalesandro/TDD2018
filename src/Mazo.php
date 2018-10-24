@@ -12,7 +12,7 @@ class Mazo {
   }
   public function mezclar() {
     if ($this->cartas == array()){
-      return null;
+      return array();
     }
     return shuffle($this->cartas);
   }
@@ -24,7 +24,6 @@ class Mazo {
    array_push($this->cartas,$numero);
   }
   public function pedirCarta(){
-    $this->mezclar();
     return array_pop($this->cartas);
   }
 }
